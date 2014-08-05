@@ -1,0 +1,51 @@
+/* Description explaining that crash data has been found and ask the user if the data might be uplaoded to the developers server */
+"CrashDataFoundDescription" = "%@ ist bei der letzten Anwendung abgestürzt. Ihr Feedback hilft uns, diese App zu verbessern. \n Crash-Bericht senden?";
+
+/* Title showing in the alert box when crash report data has been found */
+"CrashDataFoundTitle" = "Crash-Bericht";
+
+/* Thank you message on successful feedback submission */
+"JMCFeedbackReceived" = "Vielen Dank für Ihr Feedback und Ihre Hilfe %@ zu verbessern.";
+/* Thank you title on feedback submission */
+"Thank You" = "Dankeschön";
+
+"Always" = "Immer";
+"No" = "Nein";
+"Yes" = "Ja";
+"Send" = "Senden";
+"Reply" = "Antworten";
+"Cancel" = "Abbrechen";
+"Close" = "Schließen";
+"No Comment" = "(Kein Kommentar)";
+"No Description" = "(Kein Text)";
+
+"AlertBeforeDeletingRecording" = "Möchten Sie diese Aufnahme löschen?";
+"RemoveRecording" = "Aufnahme Löschen";
+
+/** Title of 'Inbox' view **/
+"Your Feedback" = "Ihr Feedback";
+
+/** Alert View when Voice is not supported **/
+"Voice Recording" = "Tonaufnahme";
+"JMCVoiceRecordingNotSupported" = "Nicht unterstützt auf diesem Gerät. Bitte Text eingeben.";
+
+/** Alert title when message not arrived in JIRA **/
+"JMCRequestPendingTitle" = "Nachricht wird gesendet";
+/** Alert when create issue request not yet successful **/
+"JMCRequestPendingMessage" = "Diese Nachricht wurde noch nicht gesendet. Bitte probieren Sie es gleich noch einmal.";
+
+/** Alert title when a request has reached the maximum number of retry attempts and will be attempted no more... */
+"JMCRequestPermErrorTitle" = "Nachricht nicht gesendet";
+/** Alert message when a request has reached the maximum number of retry attempts and will be attempted no more... */
+"JMCRequestPermErrorMessage" = "Diese Nachricht wurde nicht gesendet. Bitte prüfen Sie Ihre Internetverbindung und probieren Sie es noch einmal";
+
+/** This feedback has been deleted. Please create new feedback instead **/
+"JMCDeletedIssueMessage" = "Dieses Feedback wurde gelöscht. Bitte ein neues Feedback hinterlassen.";
+
+"JMCInAppNotification-Singular" = "%d neue Nachricht von Entwickler";
+"JMCInAppNotification-Plural" = "%d neue Nachrichten von Entwickler";
+
+"JMCAttachmentsTitle" = "Anhänge";
+"JMCRecordingLabel" = "Tonaufnahme";
+"JMCImageLabel" = "Bild";
+"JMCCustomerLabel" = "Sonstiges";
