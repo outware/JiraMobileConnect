@@ -19,7 +19,7 @@
 
 @implementation JMCComment
 
-@synthesize requestId = _requestId, author = _author, systemUser = _systemUser, body = _body, date = _date, dateLong;
+@synthesize requestId = _requestId, author = _author, systemUser = _systemUser, body = _body, date = _date  ;
 
 
 - (id) initWithAuthor:(NSString *)p_author
