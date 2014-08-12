@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Jira Mobile Connect library"
   s.homepage     = "https://bitbucket.org/atlassian/jiraconnect-ios"
   s.author       = { "Atlassian Software" => "info@atlassian.com" }
-  s.source       = { :git => "https://github.com/outware-mobile/OMJiraMobileConnect.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "https://github.com/outware-mobile/JiraMobileConnect.git", :tag => "v#{s.version}" }
   s.platform     = :ios, '5.0'
   s.source_files = 'JIRAConnect/JMCClasses/Base/*.{h,m}', 'JIRAConnect/JMCClasses/Core/**/*.{h,m}'
   s.requires_arc = true
