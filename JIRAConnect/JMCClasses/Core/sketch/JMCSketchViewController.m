@@ -93,7 +93,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-#pragma mark UIScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scView {
     
 }
@@ -102,7 +102,7 @@
     
 }
 
-- (void)scrollViewDidEndZooming:(UIScrollView *)scView withView:(UIView *)view atScale:(float)scale {
+- (void)scrollViewDidEndZooming:(UIScrollView *)scView withView:(UIView *)view atScale:(CGFloat)scale {
     
 }
 

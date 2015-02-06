@@ -77,7 +77,7 @@ static CrashReporter *crashReportSender = nil;
             _crashReportAnalyzerStarted = 0;
         } else
         {
-            _crashReportAnalyzerStarted = [[NSUserDefaults standardUserDefaults] integerForKey:kCrashReportAnalyzerStarted];
+            _crashReportAnalyzerStarted = (int)[[NSUserDefaults standardUserDefaults] integerForKey:kCrashReportAnalyzerStarted];
         }
 
         testValue = nil;

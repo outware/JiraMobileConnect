@@ -130,7 +130,7 @@ static NSRecursiveLock *writeLock;
         }
         return issue;
     }
-    JMCALog(@"No issue at index = %u", issueIndex);
+    JMCALog(@"No issue at index = %lu", issueIndex);
     return nil;
 }
 
