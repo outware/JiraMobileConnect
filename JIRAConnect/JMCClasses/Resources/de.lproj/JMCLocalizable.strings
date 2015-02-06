@@ -14,6 +14,7 @@
 "Yes" = "Ja";
 "Send" = "Senden";
 "Reply" = "Antworten";
+"Feedback" = "Feedback";
 "Cancel" = "Abbrechen";
 "Close" = "Schließen";
 "No Comment" = "(Kein Kommentar)";
@@ -28,12 +29,10 @@
 /** Alert View when Voice is not supported **/
 "Voice Recording" = "Tonaufnahme";
 "JMCVoiceRecordingNotSupported" = "Nicht unterstützt auf diesem Gerät. Bitte Text eingeben.";
-
 /** Alert title when message not arrived in JIRA **/
 "JMCRequestPendingTitle" = "Nachricht wird gesendet";
 /** Alert when create issue request not yet successful **/
 "JMCRequestPendingMessage" = "Diese Nachricht wurde noch nicht gesendet. Bitte probieren Sie es gleich noch einmal.";
-
 /** Alert title when a request has reached the maximum number of retry attempts and will be attempted no more... */
 "JMCRequestPermErrorTitle" = "Nachricht nicht gesendet";
 /** Alert message when a request has reached the maximum number of retry attempts and will be attempted no more... */
