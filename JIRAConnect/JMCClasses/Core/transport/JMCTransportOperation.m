@@ -165,7 +165,7 @@
     [[JMCRequestQueue sharedInstance] updateItem:requestId sentStatus:JMCSentStatusRetry bumpNumAttemptsBy:1];
     
     if ([self.delegate respondsToSelector:@selector(transportDidFinishWithError:statusCode:requestId:)]) {
-        [self.delegate transportDidFinishWithError:error statusCode:statusCode requestId:requestId];
+        [self.delegate transportDidFinishWithError:error statusCode:(int)statusCode requestId:requestId];
     }
     
 #ifdef JMC_DEBUG
@@ -178,7 +178,7 @@
         msg = [msg stringByAppendingString:responseString];
     }
     NSString *absoluteURL = [[request.URL absoluteURL] description];
-    JMCDLog(@"Request failed: %@ URL: %@, response code: %d", msg, absoluteURL, statusCode);
+    JMCDLog(@"Request failed: %@ URL: %@, response code: %ld", msg, absoluteURL, statusCode);
 #endif
     
     looping = NO;

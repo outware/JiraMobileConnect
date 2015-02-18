@@ -110,7 +110,7 @@
         if (item != nil && item.filenameFormat != nil) {
             
             NSString *filename = [NSString stringWithFormat:item.filenameFormat, attachmentIndex];
-            NSString *key = [item.name stringByAppendingFormat:@"-%d", attachmentIndex];    
+            NSString *key = [item.name stringByAppendingFormat:@"-%ld", (long)attachmentIndex];
             if (item.type == JMCAttachmentTypeCustom ||
                 item.type == JMCAttachmentTypeSystem) {
                 // the JIRA Plugin expects all customfields to be in the 'customfields' part.

@@ -132,7 +132,7 @@
     [coder encodeObject:self.filenameFormat forKey:kFilenameFormat];
     [coder encodeObject:self.name forKey:kName];
     [coder encodeInt:self.type forKey:kType];
-    [coder encodeInt:self.dataLength forKey:kDataLength];
+    [coder encodeInt:(int)self.dataLength forKey:kDataLength];
     [coder encodeBool:self.deleteFileWhenSent forKey:kDeleteFileWhenSent];
 }
 

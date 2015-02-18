@@ -65,20 +65,18 @@
 
     CGSize size;
 
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
-        size = [[dateFormatter stringFromDate:comment.date]
-                boundingRectWithSize:CGSizeMake(widthConstraint, 20.f)
-                             options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
-                          attributes:@{NSFontAttributeName:[JMCMessageBubble fontDetailLabel], NSParagraphStyleAttributeName:paragraphStyle}
-                             context:nil
-        ].size;
-    else //if iOS version is below 6, use the method deprected in iOS 7
-        size = [[dateFormatter stringFromDate:comment.date]
-                sizeWithFont:[JMCMessageBubble fontDetailLabel]
-           constrainedToSize:CGSizeMake(widthConstraint, 20.f)
-               lineBreakMode:NSLineBreakByClipping
-        ];
-
+#ifdef __IPHONE_7_0
+    size = [[dateFormatter stringFromDate:comment.date]
+            boundingRectWithSize:CGSizeMake(widthConstraint, 20.f)
+            options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
+            attributes:@{NSFontAttributeName:[JMCMessageBubble fontDetailLabel], NSParagraphStyleAttributeName:paragraphStyle}
+            context:nil].size;
+#else
+    size = [[dateFormatter stringFromDate:comment.date]
+            sizeWithFont:[JMCMessageBubble fontDetailLabel]
+            constrainedToSize:CGSizeMake(widthConstraint, 20.f)
+            lineBreakMode:NSLineBreakByClipping];
+#endif
 
     return CGSizeMake(ceilf(size.width), ceilf(size.height));
 

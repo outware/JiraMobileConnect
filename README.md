@@ -34,9 +34,6 @@ To install JIRA Mobile Connect into your current project:
     * AVFoundation
     * CoreLocation
     * libsqlite3 (used to cache issues on the device)
-1. If you use automatic reference counting (ARC) you will need to disable it for the JIRA Mobile Connect code:
-    * In the **'Build Phases'** view, expand **'Compile Sources'**
-    * For all JMC source files, set `-fno-objc-arc` as the compiler flags
 1. Build your App, and ensure there are no errors.
 1. If you wish to enable JMC debug logging in the console, then define the JMC_DEBUG=1 Preprocessor Macro for your build target. In Xcode: Targets --> <your target> --> Preprocessor Macross --> Debug --> + --> JMC_DEBUG=1 . ![JMC_DEBUG=1](https://bytebucket.org/atlassian/jiraconnect-ios/wiki/JMC_DEBUG.png)
 
@@ -98,6 +95,8 @@ e.g. the following will present just the create issue ViewController programatic
 Use [[JMC sharedInstance] issuesViewController] to simply present the inbox directly.
 
 1. You can test the Crash Reporting, simply by adding a CFRelease(NULL); statement somewhere in your code. 
+
+1. Before distributing your software you must include the contents of the LICENCES file JIRAConnect/JMCClasses/LICENSES somewhere within you app along with the License information that you can find lower in this document.
 
 Advanced Configuration Options
 ------------------------------

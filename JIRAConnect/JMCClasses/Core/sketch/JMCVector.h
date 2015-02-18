@@ -38,7 +38,6 @@
 @property (nonatomic, strong) NSMutableArray *points;
 
 - (void)addPoint:(CGPoint)point;
-- (void)visitPoints;
 
 - (void)extendPoint;
 - (void)lengthOfArrowHead;

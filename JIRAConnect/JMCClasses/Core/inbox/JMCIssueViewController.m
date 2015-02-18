@@ -65,7 +65,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor clearColor];
     [self scrollToLastComment];
@@ -130,18 +130,16 @@
     CGSize size;
     CGSize constrainedSize = CGSizeMake(self.tableView.bounds.size.width, self.tableView.bounds.size.height*2.f);
 
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
-        size = [self.issue.summary boundingRectWithSize:constrainedSize
-                                                options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
-                                             attributes:@{NSFontAttributeName:self.titleFont}
-                                                context:nil
-        ].size;
-    else //if iOS version is below 6, use the method deprected in iOS 7
-        size = [self.issue.summary sizeWithFont:self.titleFont
-                              constrainedToSize:constrainedSize
-                                  lineBreakMode:NSLineBreakByClipping
-        ];
-
+#ifdef __IPHONE_7_0
+    size = [self.issue.summary boundingRectWithSize:constrainedSize
+                                            options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin
+                                         attributes:@{NSFontAttributeName:self.titleFont}
+                                            context:nil].size;
+#else
+    size = [self.issue.summary sizeWithFont:self.titleFont
+                          constrainedToSize:constrainedSize
+                              lineBreakMode:NSLineBreakByClipping];
+#endif
     return size;
 
 }
